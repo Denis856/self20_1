@@ -45,11 +45,12 @@ ul {
    position: absolute;
    width: 100%;
    top: 0;
+   height: 80px;
    padding: 60px 0;
-   overflow: hidden;
+   z-index: 100;
    .head {
-      @include center2;
-      align-items: center;
+      display: flex;
+      justify-content: space-between;
       font-weight: 600;
       font-size: 30px;
       line-height: 37px;
@@ -58,6 +59,8 @@ ul {
    .logo {
       position: relative;
       z-index: 5;
+      color: #FFFFFF;
+      height: 50px;
    }
    .head_text {
       width: 50%;
@@ -69,11 +72,54 @@ ul {
       p {
          text-shadow: 2px 2px 10px #000000;
       }
-      img {
-         transform: translateY(30%);
-      }
    }
 }
+
+.menu_img {
+   transform: translateY(30%);
+   cursor: pointer;
+   transition: all .3s ease;
+}
+
+.turn {
+   transform: translateY(30%) rotateX(180deg);
+}
+
+.menu1 {
+   height: 300px;
+   overflow: hidden;
+   position: relative;
+   &__list {
+      transform: translateX(10%) translateY(-200%);
+      transition: all .3s ease;
+      margin: 40px 0 0 0;
+   }
+   &__link {
+      color: #fff;
+      text-shadow: 2px 2px 10px #000000;
+      padding: 2px 5px;
+      border-radius: 10px;
+      transition: all .3s ease;
+      position: relative;
+      &:hover {
+         color: rgb(147, 139, 139);
+         top: -3px;
+      }
+      &:active {
+         color: rgb(17, 166, 185);
+         top: 0;
+      }
+   }
+   li {
+      margin: 20px 0 0 0;
+   }
+}
+
+.turn2 {
+   transform: translateX(10%) translateY(0);
+}
+
+// =============================================
 
 .page0 {
    background: url('../img/bg21.jpg') 0 0/ cover no-repeat;
@@ -136,6 +182,13 @@ ul {
          height: auto;
          opacity: 0;
          z-index: 100;
+         transition: all .3s ease;
+         &:hover {
+            transform: translate(-50%, 50%) scale(1.1);
+         }
+         &:active {
+            transform: translate(-50%, 50%) scale(0.9);
+         }
       }
       &:hover {
          position: relative;
@@ -159,6 +212,13 @@ ul {
          height: auto;
          z-index: 50;
          opacity: 0;
+         transition: all .3s ease;
+         &:hover {
+            transform: translate(-50%, 50%) scale(1.1);
+         }
+         &:active {
+            transform: translate(-50%, 50%) scale(0.9);
+         }
       }
       &:hover {
          position: relative;
@@ -208,6 +268,7 @@ ul {
    opacity: 0;
    transition: all .3s ease;
    z-index: 2;
+   color:rgba(0, 0, 0, 0.664);
 }
 .page1_item:hover:after {
    opacity: 0.7;
@@ -287,33 +348,52 @@ ul {
 .page3_items {
    @include center2;
    padding: 50px 0 450px 0;
-   .page3_item {
-      width: 300px;
-      background: rgba(0, 0, 0, 0.5);
-      overflow: hidden;
-      p {
-         font-weight: 400;
-         font-size: 18px;
-         line-height: 22px;
-         text-align: center;
-         color: #FFFFFF;
-         padding: 10px 15px;
-      }
-      img {
-         transition: all .3s ease;
-         &:hover {
-            transform: scale(1.1);
-         }
-         max-width: 100%;
-         height: auto;
-      }
-   }
    .page3_item:first-child {
       transform: translateY(80%);
    }
    .page3_item:last-child {
       transform: translateY(80%);
    }
+}
+
+.page3_item {
+   cursor: pointer;
+   width: 300px;
+   background: rgba(0, 0, 0, 0.5);
+   overflow: hidden;
+   transition: all .3s ease;
+   p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 10px 15px;
+   }
+   img {
+      transition: all .3s ease;
+      &:hover {
+         transform: scale(1.1);
+      }
+      max-width: 100%;
+      height: auto;
+   }
+}
+
+.big {
+   display: flex;
+   justify-content: center;
+}
+
+.little {
+   width: 20px;
+   height: 20px;
+   opacity: 0;
+   z-index: -1;
+}
+
+.down {
+   transform: translateY(0);
 }
 
 // ******************************************
@@ -457,8 +537,18 @@ ul {
 }
 
 @media(max-width: 800px){
+   .bg32 {
+      background: rgba(0, 0, 0, 0.6);
+   }
    .header {
-      padding: 30px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 0;
+      height: 30px;
+   }
+   .menu1__list {
+      margin: 20px 0 0 0;
    }
    .header .head {
       font-size: 20px;

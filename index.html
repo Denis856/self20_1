@@ -12,19 +12,28 @@
       <header class="header">
          <div class="container">
             <div class="head">
-               <a class="logo">logo</a>
+               <a href="#page0" class="logo">logo</a>
                <figure class="head_text">
                   Lorem ipsum dolor, SIT amet<br> consectetur adipisicing elit. 
                </figure>
-               <div class="menu">
-                  <p>menu</b>
-                  <img src="img/logo.png" alt="logo">
+               <div class="menu1">
+                  <div class="menu">
+                     <p>menu</b>
+                     <img onclick="turn()" class="menu_img" src="img/logo.png" alt="logo">
+                  </div>
+                  <nav class="menu1__item">
+                     <ul class="menu1__list">
+                        <li><a href="#page1" class="menu1__link">page 1</a></li>
+                        <li><a href="#page2" class="menu1__link">page 2</a></li>
+                        <li><a href="#page3" class="menu1__link">page 3</a></li>
+                     </ul>
+                  </nav>
                </div>
             </div>
          </div>
       </header>
       <main class="main">
-         <section class="page0">
+         <section id="page0" class="page0">
             <div class="container">
                <div class="page0_body">
                   <div class="page0_body_content">
@@ -33,21 +42,21 @@
                      </h1>
                      <a href="#" class="page0_link_to_video">
                         <p>Show video</p>
-                        <img src="img/play.png" alt="play">
+                        <img src="img/play1.png" alt="play">
                      </a>
                   </div>
                </div>
             </div>
          </section>
-         <section class="page1">
+         <section id="page1" class="page1">
             <div class="container">
                <h3 class="title">Page 1</h3>
                <div class="page1_body">
                   <div class="page1_body_left">
-                     <div class="page1_item">
+                     <div class="page1_item page1_item1">
                         <img class="img" src="img/play.png" alt="icon">
                      </div>
-                     <div class="page1_item">
+                     <div class="page1_item page1_item2">
                         <img class="img" src="img/play.png" alt="icon">
                      </div>
                   </div>
@@ -55,17 +64,17 @@
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, odio.
                   </div>
                   <div class="page1_body_right">
-                     <div class="page1_item1">
+                     <div class="page1_item1 page1_item3">
                         <img class="img" src="img/play.png" alt="icon">
                      </div>
-                     <div class="page1_item1">
+                     <div class="page1_item1 page1_item4">
                         <img class="img" src="img/play.png" alt="icon">
                      </div>
                   </div>
                </div>
             </div>
          </section>
-         <section class="page2">
+         <section id="page2" class="page2">
             <div class="container">
                <h3 class="title">Page 2</h3>
                <div class="page2_items">
@@ -93,34 +102,34 @@
                </div>
             </div>
          </section>
-         <section class="page3">
+         <section id="page3" class="page3">
             <div class="container">
                <h3 class="title">
                   Page 3
                </h3>
                <div class="page3_items">
-                  <div class="page3_item">
+                  <div class="page3_item page3_item1">
                      <img src="img/img31.png" alt="icon">
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam reiciendis 
                         quaerat harum culpa soluta doloremque quasi aut libero ipsa placeat!
                      </p>
                   </div>
-                  <div class="page3_item">
+                  <div class="page3_item page3_item2">
                      <img src="img/img32.png" alt="icon">
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam reiciendis 
                         quaerat harum culpa soluta doloremque quasi aut libero ipsa placeat!
                      </p>
                   </div>
-                  <div class="page3_item">
+                  <div class="page3_item page3_item3">
                      <img src="img/img33.png" alt="icon">
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam reiciendis 
                         quaerat harum culpa soluta doloremque quasi aut libero ipsa placeat!
                      </p>
                   </div>
-                  <div class="page3_item">
+                  <div class="page3_item page3_item4">
                      <img src="img/img34.png" alt="icon">
                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam reiciendis 
@@ -135,5 +144,7 @@
          copy 2022
       </footer>
    </div>
+   <script src="js/jquery-1.9.1.min.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>
