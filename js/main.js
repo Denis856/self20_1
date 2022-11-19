@@ -43,3 +43,43 @@ $(function(){
 
 
 // =========================================
+
+$(".menu1__link1").click(function(){
+   $(".page1").addClass('opacy1');
+   $(".main").addClass('height1');
+   $(".page0").addClass('opacy0');
+   $(".header").addClass('opacy0');
+   $(".page1_body_center").addClass('tit_back');
+   $(".page1_body_left").addClass('tit_back1');
+   $(".page1_body_right").addClass('tit_back1');
+});
+
+$(".menu1__link2").click(function(){
+   $(".page2").addClass('opacy1');
+   $(".main").addClass('height1');
+   $(".page0").addClass('opacy0');
+   $(".header").addClass('opacy0');
+   $(".page2_items").addClass('tit_back2');
+});
+
+$(".menu1__link3").click(function(){
+   $(".page3").addClass('opacy1');
+   $(".main").addClass('height1');
+   $(".page0").addClass('opacy0');
+   $(".header").addClass('opacy0');
+   $(".page3_items").addClass('tit_back3');
+});
+
+$(".close").click(function(){
+   $(".page1").removeClass('opacy1');
+   $(".page2").removeClass('opacy1');
+   $(".page3").removeClass('opacy1');
+   $(".page2_items").removeClass('tit_back2');
+   $(".page3_items").removeClass('tit_back3');
+   $(".main").removeClass('height1');
+   $(".page0").removeClass('opacy0');
+   $(".header").removeClass('opacy0');
+   $(".page1_body_center").removeClass('tit_back');
+   $(".page1_body_left").removeClass('tit_back1');
+   $(".page1_body_right").removeClass('tit_back1');
+});

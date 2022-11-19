@@ -23,16 +23,6 @@ ul {
   margin: 0 auto;
 }
 
-.title {
-  padding: 67px 0 0 0;
-  margin: 0 0 81px 0;
-  font-size: 60px;
-  line-height: 73px;
-  color: #FFFFFF;
-  text-shadow: 0px 0px 10px #000000;
-  text-align: center;
-}
-
 .main {
   background: url("../img/bg1.png") 0 0/cover no-repeat;
   background-attachment: fixed;
@@ -123,6 +113,167 @@ ul {
 .turn2 {
   -webkit-transform: translateX(10%) translateY(0);
           transform: translateX(10%) translateY(0);
+}
+
+body {
+  overflow: hidden;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.main {
+  overflow: scroll;
+}
+
+.height1 {
+  height: 100vh;
+}
+
+.page1, .page2, .page3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  -webkit-transform: translateY(-1000%) rotate(1000deg);
+          transform: translateY(-1000%) rotate(1000deg);
+}
+
+.page0 {
+  opacity: 1;
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.opacy1 {
+  opacity: 1;
+  overflow: scroll;
+  z-index: 100;
+  -webkit-transform: translateY(0) rotateY(0);
+          transform: translateY(0) rotateY(0);
+}
+
+.page1_body_center {
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  opacity: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+}
+
+.tit_back {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  z-index: 100;
+}
+
+.page1_body_left, .page1_body_right {
+  -webkit-transform: translateY(-1000%);
+          transform: translateY(-1000%);
+  opacity: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+}
+
+.tit_back1 {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  z-index: 100;
+}
+
+.page2_items {
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  opacity: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  padding: 0 0 100px 0;
+}
+
+.tit_back2 {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  z-index: 100;
+}
+
+.page3_items {
+  -webkit-transform: translateX(-1000%);
+          transform: translateX(-1000%);
+  opacity: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+}
+
+.tit_back3 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.title {
+  display: block;
+  padding: 67px 0 0 0;
+  margin: 0 0 81px 0;
+  font-size: 60px;
+  line-height: 73px;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 10px #000000;
+  text-align: center;
+}
+
+.opacy0 {
+  opacity: 0;
+  height: 0;
+}
+
+.close {
+  position: relative;
+  z-index: 100;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.close:after,
+.close:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4.5px;
+  background: #fff;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.close:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.close:hover:before,
+.close:hover:after {
+  background: rgb(116, 114, 114);
+}
+
+.close:active:before,
+.close:active:after {
+  background: rgb(17, 166, 185);
 }
 
 .page0 {
@@ -354,7 +505,7 @@ ul {
 .page2_item img {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 .page2_item img:hover {
@@ -453,9 +604,12 @@ ul {
 }
 
 @media (max-width: 1700px) {
+  .page2_items {
+    width: 90%;
+    margin: 0 auto;
+  }
   .container {
     width: 100%;
-    padding: 0;
   }
   .header {
     padding: 60px 20px 0 20px;
@@ -648,6 +802,9 @@ ul {
   }
 }
 @media (max-width: 750px) {
+  .page2_items {
+    padding: 0 20px 0 0;
+  }
   .page1_body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -656,6 +813,7 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0 20px 77px 20px;
   }
   .page1_body .page1_body_center {
     width: 350px;
@@ -735,6 +893,9 @@ ul {
   }
 }
 @media (max-width: 500px) {
+  .close {
+    left: 20px;
+  }
   .header .head {
     font-size: 20px;
     line-height: 20px;
@@ -780,6 +941,9 @@ ul {
   }
 }
 @media (max-width: 400px) {
+  .close {
+    left: 10px;
+  }
   .page1_body .page1_body_center {
     width: 250px;
     padding: 0;
