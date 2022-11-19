@@ -168,30 +168,6 @@ ul {
   height: 50px;
 }
 
-.animated {
-  opacity: 1 !important;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
-}
-
-.need-animate {
-  opacity: 0 !important;
-}
-
-.trans_l {
-  -webkit-transform: translateX(-1000px);
-          transform: translateX(-1000px);
-  opacity: 0;
-}
-
-.trans_l_1 {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  opacity: 1;
-}
-
 .page1_body {
   display: -webkit-box;
   display: -ms-flexbox;
